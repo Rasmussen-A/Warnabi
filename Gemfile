@@ -3,7 +3,7 @@ ruby '1.8.7'
 
 gem 'rails', '3.2.0'
 
-group :development, :testing do
+group :development, :test do
   gem 'sqlite3'
 end
 
