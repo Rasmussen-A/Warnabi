@@ -22,6 +22,7 @@ end
 
 gem 'json'
 gem 'jquery-rails'
+gem 'rails-i18n', '~> 3.0.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
