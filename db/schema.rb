@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140120132904) do
+ActiveRecord::Schema.define(:version => 20140122140058) do
 
   create_table "materials", :force => true do |t|
     t.string   "type"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20140120132904) do
     t.integer  "weight"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "product_id"
   end
 
   create_table "products", :force => true do |t|

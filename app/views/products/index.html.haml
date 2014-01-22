@@ -1,23 +1,12 @@
-%h1 Listing products
+-# @products.each do |product|
+  .item.well.col-sm-5.col-sm-offset-1
+    = truncate product.name, :length => 8
 
-%table
-  %tr
-    %th Name
-    %th Description
-    %th Metatags
-    %th
-    %th
-    %th
-
-  - @products.each do |product|
-    %tr
-      %td= product.name
-      %td= product.description
-      %td= product.metatags
-      %td= link_to 'Show', product
-      %td= link_to 'Edit', edit_product_path(product)
-      %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to I18n.t(:add_product), new_product_path
+- count = 0
+- while count < @products.count do
+  .row
+    - @products[count..count + 2].each do |product|
+      .item.well.col-sm-3.col-sm-offset-1
+        = product.name
+        = product.materials.each { |m| m.price }
+  - count += 3

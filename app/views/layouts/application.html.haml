@@ -6,4 +6,16 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = yield
+    %nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        = link_to "Warnabi", root_path, :class => 'navbar-brand'
+    .container
+      .row
+        #sidebar.col-sm-3
+          .affix
+            #cart.well
+              Cart
+            #categories.well
+              Categories
+        .col-sm-9
+          = yield
