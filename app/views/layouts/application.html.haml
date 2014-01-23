@@ -9,12 +9,18 @@
     %nav.navbar.navbar-default.navbar-fixed-top
       .container
         = link_to "Warnabi", root_path, :class => 'navbar-brand'
+        %p.navbar-text.pull-right
+          %span.glyphicon.glyphicon-user
+          Mike
     .container
       .row
         #sidebar.col-sm-3
           .affix
             #cart.well
-              Cart
+              %span.glyphicon.glyphicon-shopping-cart
+              Корзина
+              %span.badge.pull-right
+                9300 р.
             #categories.well
               Categories
         .col-sm-9

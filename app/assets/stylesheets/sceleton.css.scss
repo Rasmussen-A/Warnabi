@@ -3,9 +3,21 @@
 body { padding-top: 70px }
 
 #sidebar { padding: 0 }
-.affix { width: inherit }
 
-.item {
-  height: 200px;
-  margin-bottom: 50px;
+.item { 
+  margin-bottom: 45px;
+  padding: 0;
+  .image {
+    background-color: orange;
+    position: absolute;
+    top: 0px;
+    bottom: 40px;
+    width: 100%;
+  }
+  .panel-footer {
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    bottom: 0;
+  }
 }

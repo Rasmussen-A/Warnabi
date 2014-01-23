@@ -1,12 +1,14 @@
--# @products.each do |product|
-  .item.well.col-sm-5.col-sm-offset-1
-    = truncate product.name, :length => 8
-
+-# Placing each 3 elements in @products array into %div.row
 - count = 0
 - while count < @products.count do
   .row
     - @products[count..count + 2].each do |product|
-      .item.well.col-sm-3.col-sm-offset-1
-        = product.name
-        = product.materials.each { |m| m.price }
+      .item.col-sm-3.col-sm-offset-1.panel.panel-default
+        = link_to product_path(product) do
+          .image.panel-body
+        .panel-footer
+          %b
+            = product.name
+          %span.badge.pull-right
+            3
   - count += 3
