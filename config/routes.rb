@@ -1,6 +1,6 @@
 Warnabi::Application.routes.draw do
   resources :products do
-    resources :materials
+    resources :items
   end
 
   root :to => 'products#index'

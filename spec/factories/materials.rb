@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :material do
-    name "MyString"
-    description "MyText"
+    name I18n.t(:silver)
+    description "Silver - 9000"
   end
 end

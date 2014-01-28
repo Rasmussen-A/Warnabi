@@ -7,8 +7,12 @@
         = link_to product_path(product) do
           .image.panel-body
         .panel-footer
-          %b
+          -# Showing price and available count if product has a subset od items
+          - if product.items.count > 0
+            -# Items already sorted by price, so display first (cheapest) item
+            = product.items[0].price
+            %span.badge.pull-right
+              = product.items[0].available
+          - else
             = product.name
-          %span.badge.pull-right
-            3
   - count += 3

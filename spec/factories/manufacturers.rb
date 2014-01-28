@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :manufacturer do
-    name "MyString"
-    description "MyText"
+    name "Ryian"
+    description "Saint-Petersburg workshop"
   end
 end

@@ -5,5 +5,7 @@ FactoryGirl.define do
     name I18n.t(:ring)
     description "<h2>Ring!</h2>"
     metatags "Slavic ring from 5th century"
+    association :category
+    association :manufacturer
   end
 end

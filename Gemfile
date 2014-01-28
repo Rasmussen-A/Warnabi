@@ -13,6 +13,9 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'guard-rspec'
   gem 'guard-spork'
+  gem 'database_cleaner', '~> 1.2.0'
+  gem 'nokogiri', '1.5.11'
+  gem 'capybara', '1.1.4'
 end
 
 group :production do

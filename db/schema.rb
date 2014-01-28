@@ -10,23 +10,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140123183954) do
+ActiveRecord::Schema.define(:version => 20140127171543) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "parent_id"
   end
 
   create_table "items", :force => true do |t|
     t.float    "price"
     t.integer  "available"
-    t.boolean  "by_request"
     t.integer  "weight"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.integer  "product_id"
+    t.integer  "material_id"
   end
 
   create_table "manufacturers", :force => true do |t|
@@ -47,8 +48,10 @@ ActiveRecord::Schema.define(:version => 20140123183954) do
     t.string   "name"
     t.text     "description"
     t.text     "metatags"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "category_id"
+    t.integer  "manufacturer_id"
   end
 
 end

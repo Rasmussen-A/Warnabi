@@ -1,8 +1,8 @@
 class Product < ActiveRecord::Base
-  attr_accessible :description, :metatags, :name
-  validates :name, :description, :presence => true
+  attr_accessible :description, :metatags, :name, :category, :manufacturer
+  validates :name, :description, :category, :manufacturer, :presence => true
 
   belongs_to :category
-  has_one :manufacturer
-  has_many :items
+  belongs_to :manufacturer
+  has_many :items, :dependent => :destroy
 end
